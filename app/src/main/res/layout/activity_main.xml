@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgound"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#C6A09A9A"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imgSun"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/sun" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:height="60dp"
+            android:fontFamily="casual"
+            android:gravity="center_vertical"
+            android:text=" Wheater Apps"
+            android:textColor="#ffffff"
+            android:textSize="9pt"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/txtToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70px"
+            android:fontFamily="casual"
+            android:text="Today, April 03"
+            android:textColor="#272727"
+            android:textSize="11pt"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/txtSuhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtToday"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="42dp"
+            android:layout_marginLeft="42dp"
+            android:fontFamily="casual"
+            android:text="26°"
+            android:textColor="#272727"
+            android:textSize="42pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtSuhu2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSuhu"
+            android:layout_marginLeft="140px"
+            android:fontFamily="casual"
+            android:text="20°"
+            android:textColor="#555454"
+            android:textSize="17pt" />
+
+        <ImageView
+            android:id="@+id/imgCloudly"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginLeft="70px"
+            android:layout_toRightOf="@+id/txtToday"
+            android:src="@drawable/cloudy" />
+
+        <TextView
+            android:id="@+id/txtCloudly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgCloudly"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/txtSuhu2"
+            android:fontFamily="casual"
+            android:text="Clodly"
+            android:textColor="#272727"
+            android:textSize="12pt"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/relativeLayout"
+        app:layout_constraintTop_toTopOf="@id/relativeLayout"
+        tools:ignore="MissingConstraints">
+
+        <TableRow
+            android:layout_marginTop="200px"
+            android:background="#8AADACAC">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/cloud" />
+
+            <TextView
+                android:layout_column="1"
+                android:fontFamily="casual"
+                android:gravity="center_vertical"
+                android:padding="10dip"
+                android:text="12.00"
+                android:textColor="#ffffff"
+                android:textSize="10pt" />
+        </TableRow>
+
+        <TableRow android:background="#8AADACAC">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/cloud" />
+
+            <TextView
+                android:layout_column="1"
+                android:fontFamily="casual"
+                android:gravity="left"
+                android:padding="10dip"
+                android:text="13.00"
+                android:textColor="#ffffff"
+                android:textSize="10pt" />
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
